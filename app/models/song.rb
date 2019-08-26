@@ -14,8 +14,8 @@ class Song < ActiveRecord::Base
   end
 
   def get_drake
-    binding.pry
-    new_drake = Artists.includes(:artist).where('artist.name = ?', "Drake")
 
+    new_drake = Artist.includes(:artist).where('artist.name = ?', "Drake")
+    binding.pry
   end
 end
