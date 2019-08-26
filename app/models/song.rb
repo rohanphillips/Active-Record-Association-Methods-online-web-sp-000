@@ -14,8 +14,8 @@ class Song < ActiveRecord::Base
   end
 
   def get_drake
-    new_artist = Artist.create(name: "Drake")
-    new_artist.save
+    # new_artist = Artist.create(name: "Drake")
+    # new_artist.save
     new_drake = Artist.find_by(name: "Drake")
     binding.pry
   end
