@@ -20,7 +20,8 @@ class Song < ActiveRecord::Base
     # new_artist.save
     new_artist = Artist.find_by(name: "Drake")
     if new_artist == nil
-      new_artist = Artist.create(name: "Drake").save
+      new_artist = Artist.create(name: "Drake")
+      new_artist.save
     end
     new_artist
   end
