@@ -16,7 +16,10 @@ class Song < ActiveRecord::Base
   def get_drake
     # new_artist = Artist.create(name: "Drake")
     # new_artist.save
-    new_drake = Artist.find_by(name: "Drake")
-    binding.pry
+    new_artist = Artist.find_by(name: "Drake")
+    if new_artist == nil
+      new_artist = Artist.create(name: "Drake").save
+    end
+    new_artist
   end
 end
